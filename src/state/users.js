@@ -19,8 +19,14 @@ export const fetchUsers = () => (dispatch, getState) => {
 
 }
 
+export const delUser = (id) => (dispatch, getState) => {
+    fetch(`https://jsonplaceholder.typicode.com/users/${id}`,
+        {method: 'DELETE'})
+        .then(response => response.json())
+        .then(json => console.log(json))
+}
 
-const initialState = {
+    const initialState = {
     usersData: null
 }
 
@@ -36,3 +42,4 @@ export default (state = initialState, action) => {
             return state
     }
 }
+

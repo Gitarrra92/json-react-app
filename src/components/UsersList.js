@@ -50,6 +50,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
     getUsersData: () => dispatch(fetchUsers())
+
 })
 
 export default connect(
